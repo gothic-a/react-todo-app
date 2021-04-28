@@ -31,4 +31,10 @@
         color: white;
         border: none;
     }
+
+    &:focus {
+        background-color: lighten($color: $text-main, $amount: 20%) ;
+        outline: none;
+        color: white;
+    }
 }

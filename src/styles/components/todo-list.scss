@@ -53,6 +53,11 @@
                     background-color: white;
                 }
 
+                &:focus {
+                    background-color:  white ;
+                    color: lighten($color: $text-main, $amount: 10%);
+                }
+
                 
                 
             }
