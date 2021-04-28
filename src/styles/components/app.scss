@@ -1,0 +1,34 @@
+.wrapper-outer {
+    width: 100vw;
+    height: 100vh;
+    background-color: $background;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .wrapper {
+        width: 500px;
+        box-sizing: border-box;
+        background-color: white;
+        margin: 100px 0;
+        padding: 0 30px;
+        border-radius: 10px;
+    }
+}
+
+.btn {
+    background-color: white;
+    border: 2px solid lighten($color: $text-light, $amount: 10%);
+    color: $text-main;
+    text-transform: uppercase;
+    font-family: QuickSand;
+    font-weight: 500;
+    transition: .2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color:  lighten($color: $text-main, $amount: 20%) ;
+        color: white;
+        border: none;
+    }
+}

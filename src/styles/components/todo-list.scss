@@ -1,0 +1,61 @@
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0;
+
+    &-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 25px;
+        box-shadow: $shadow;
+        margin-bottom: 15px;
+        color: $text-main;
+        font-weight: 400;
+        
+        .status {
+            margin-left: 25px;
+
+            i {
+                font-size: 1.1em;
+            }
+        }
+
+        .text {
+            font-family: QuickSand;
+            font-weight: 500;
+        }
+
+        .item-controls {
+            margin-right: 12px;
+
+            .btn {
+                border: none;
+                font-size: 1.1em;
+
+                &-remove {
+                   border-radius: 25px 0 0 25px; 
+                   border-right: none;
+                   padding-left: 15px;
+                   margin-right: 3px;
+                }
+
+                &-important {
+                    border-radius: 0 25px 25px 0; 
+                    border-left: none;
+                    padding-right: 15px;
+                }
+
+                &:hover {
+                    color: lighten($color: $text-main, $amount: 10%);
+                    background-color: white;
+                }
+
+                
+                
+            }
+        }
+    }
+}

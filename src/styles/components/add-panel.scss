@@ -1,0 +1,44 @@
+.add-panel {
+    position: relative;
+    margin-bottom: 60px;
+    width: 100%;
+
+    .add-field {
+        box-shadow: 0px -1px 5px 0px rgba(46, 61, 73, 0.35);
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 15px;
+        width: 100%;
+
+        input {
+            border: 0px solid $text-light;
+            border-radius: 25px 0 0 25px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            font-family: QuickSand;
+            width: 100%;
+            
+            color: lighten($color: $text-main, $amount: 0%);
+            font-weight: 500;
+            font-size: 1.1em;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .btn {
+            border-radius: 0 25px 25px 0;
+            border: none;
+            border-left: 2px solid lighten($color: $text-light, $amount: 5%);
+            padding: 0 30px 0 25px;
+            box-shadow: -1px 1px 4px 0px rgba(34, 60, 80, 0.3);
+
+            &:hover {
+                background-color: lighten($color: $text-light, $amount: 5%);
+            }
+        }
+    }
+}

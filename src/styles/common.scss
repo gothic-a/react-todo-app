@@ -1,0 +1,21 @@
+@import './normalize.css';
+@import './fonts.scss';
+@import './vars.scss';
+
+body {
+    font-family: Roboto;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@import './components/all.scss';
