@@ -7,34 +7,39 @@
     justify-content: center;
 
     .wrapper {
-        width: 500px;
+        width: 550px;
         box-sizing: border-box;
         background-color: white;
         margin: 100px 0;
-        padding: 0 30px;
+        padding: 0 35px;
         border-radius: 10px;
+        background-color: $background-lite;
     }
 }
 
 .btn {
     background-color: white;
-    border: 2px solid lighten($color: $text-light, $amount: 10%);
-    color: $text-main;
+    color: $button-main;
     text-transform: uppercase;
     font-family: QuickSand;
     font-weight: 500;
     transition: .2s;
     cursor: pointer;
+    border: none;
 
     &:hover {
-        background-color:  lighten($color: $text-main, $amount: 20%) ;
-        color: white;
-        border: none;
+        background-color: $button-main;
+        color: white !important;
     }
 
     &:focus {
-        background-color: lighten($color: $text-main, $amount: 20%) ;
+        background-color: $button-main;
         outline: none;
         color: white;
     }
+}
+
+i, p, button, input, span {
+    font-size: $font-size;
+    font-style: normal !important;
 }

@@ -5,10 +5,11 @@
     margin: 15px 0 10px 0;
 
     &-title {
-        font-weight: 300;
+        font-weight: 400;
         color: $text-main;
         font-family: QuickSand;
         text-transform: uppercase;
+        font-size: 2.25em;
     }
 
     &-status {
@@ -20,17 +21,24 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            font-weight: 500;
-            
+            align-items: center;
+            color: $text-main;
+
+            span {
+                margin-left: 12px;
+                font-weight: 700;
+
+                &:nth-last-child(2) {
+                    font-weight: 500;
+                    font-size: ($font-size - 0.1em) !important;
+                    color: $text-light;
+                }
+            }
+
             &:nth-last-child(1) {
                 margin-top: 5px;
             }
 
-            span {
-                margin-left: 12px;
-                color: $text-main;
-                font-weight: 700;
-            }
         }
 
     }

@@ -4,7 +4,7 @@
     width: 100%;
 
     .add-field {
-        box-shadow: 0px -1px 5px 0px rgba(46, 61, 73, 0.35);
+        box-shadow: 0px -3px 10px 3px rgba(79, 79, 79, 0.2);
         border-radius: 25px;
         display: flex;
         justify-content: space-between;
@@ -22,7 +22,6 @@
             
             color: lighten($color: $text-main, $amount: 0%);
             font-weight: 500;
-            font-size: 1.1em;
 
             &:focus {
                 outline: none;
@@ -31,19 +30,13 @@
 
         .btn {
             border-radius: 0 25px 25px 0;
-            border: none;
-            border-left: 2px solid lighten($color: $text-light, $amount: 0%);
+            background-color: $button-main;
             padding: 0 30px 0 25px;
+            color: white;
 
-            &:hover {
-                background-color: lighten($color: $text-main, $amount: 20%);
-                border-color: lighten($color: $text-main, $amount: 20%);
+            &:hover, &:focus {
+                background-color: darken($color: $button-main, $amount: 10%);
             }
-
-            &:focus {
-                border-color: lighten($color: $text-main, $amount: 20%);
-            }
-
 
         }
     }

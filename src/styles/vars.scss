@@ -1,5 +1,15 @@
 $background: #5EB4FC;
-$bcg-light-grey: rgb(253, 253, 253);
+$background-lite: rgb(252, 252, 252);
+
 $text-main: #535353;
 $text-light: rgb(184, 184, 184);
-$shadow: 0px 2px 5px 0px rgba(34, 60, 80, 0.35);
+
+$button-main: lighten($color: $text-main, $amount: 8%);
+
+$shadow: 0px 3px 10px 0px rgba(79, 79, 79, 0.2);
+
+$font-size: 1.1em;
+
+$done-color: #29c959;
+
+$important-color: #f5cb10;
