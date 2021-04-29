@@ -1,11 +1,23 @@
+import { useState, useEffect} from 'react'
 
-const Header = () => {
+const Header = ({tasks}) => {
+
+    const [actual, setActual] = useState(null)
+    const [done, setDone] = useState(null)
+
+    useEffect(() => {
+        
+        setActual(
+            tasks.filter(t => !t.done).length
+        )
+
+    }, [tasks])
+
     return (
         <div className="header">
             <h1 className="header-title">Your tasks</h1>
             <div className="header-status">
-                <div className="all"><span>all</span> <span>10</span></div>
-                <div className="done"><span>done</span> <span>7</span></div>
+                <div className="all"><span>actual</span> <span>{actual}</span></div>
             </div>
         </div>
     )

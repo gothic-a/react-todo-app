@@ -7,14 +7,13 @@
     &-title {
         font-weight: 400;
         color: $text-main;
-        font-family: QuickSand;
+        font-family: $first-font;
         text-transform: uppercase;
         font-size: 2.25em;
     }
 
     &-status {
         color: $text-light;
-        font-family: QuickSand;
         text-transform: uppercase;
 
         div {
@@ -26,20 +25,15 @@
 
             span {
                 margin-left: 12px;
-                font-weight: 700;
+                font-size: $font-size * 1.5;
+                font-weight: 500;
 
                 &:nth-last-child(2) {
-                    font-weight: 500;
-                    font-size: ($font-size - 0.1em) !important;
+                    font-size: ($font-size + 0.25em) !important;
                     color: $text-light;
+                    opacity: .5; 
                 }
             }
-
-            &:nth-last-child(1) {
-                margin-top: 5px;
-            }
-
         }
-
     }
 }

@@ -1,12 +1,11 @@
 import { useReducer, useEffect } from 'react'
+
 import TasksContext from '../context/tasks-context'
 import { reducer, initialState } from '../reducer'
-
-import { getTasks } from '../services/tasks'
-
-import { onFetchTasks } from '../actions' 
+import { getTasks, setTasks } from '../services/tasks'
 
 import '../styles/common.scss'
+
 import Header from './Header'
 import Controls from './Controls'
 import TodoList from './TodoList'
@@ -18,15 +17,20 @@ const App = () => {
 
     useEffect(() => {
         const tasks = getTasks()
-
+        
         dispatch({type: 'FETCH_TASKS', payload: tasks })
     }, [])
+
+    useEffect(() => {
+        setTasks(state.tasks)
+
+    }, [state.tasks])
 
     return (
         <TasksContext.Provider value={ { state, dispatch } }>
             <div className="wrapper-outer">
                 <div className="wrapper">
-                    <Header />
+                    <Header tasks={state.tasks}/>
                     <Controls />
                     <TodoList />
                     <AddPanel />

@@ -1,0 +1,9 @@
+@import './empty-list.scss';
+@import './todo-list-item.scss';
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0;
+}

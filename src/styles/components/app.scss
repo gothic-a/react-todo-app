@@ -1,16 +1,24 @@
+i, p, button, input, span {
+    font-size: $font-size;
+    font-style: normal !important;
+    font-family: $first-font, $second-font;
+}
+
 .wrapper-outer {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $background;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    padding-top: 75px ;
+    padding-bottom: 50px;
+    box-sizing: border-box;
 
     .wrapper {
         width: 550px;
         box-sizing: border-box;
         background-color: white;
-        margin: 100px 0;
         padding: 0 35px;
         border-radius: 10px;
         background-color: $background-lite;
@@ -21,7 +29,6 @@
     background-color: white;
     color: $button-main;
     text-transform: uppercase;
-    font-family: QuickSand;
     font-weight: 500;
     transition: .2s;
     cursor: pointer;
@@ -39,7 +46,20 @@
     }
 }
 
-i, p, button, input, span {
-    font-size: $font-size;
-    font-style: normal !important;
+.input {
+    border: none;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    font-family: $first-font, $second-font;
+    font-weight: 500;
+    color: $text-main;
+    font-size: $font-size + 0.05;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.dummy {
+    display: none;
 }

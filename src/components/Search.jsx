@@ -10,7 +10,7 @@ const Search = ({onSearchInput}) => {
 
     return (
         <div className="search">
-            <input type="text" placeholder="search" value={value} onChange={ e => setValue(e.target.value) }/>
+            <input className="input search-input" type="text" placeholder="search" value={value} onChange={ e => setValue(e.target.value) }/>
         </div>
     )
 }

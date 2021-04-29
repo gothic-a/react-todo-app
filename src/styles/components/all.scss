@@ -1,5 +1,6 @@
 @import './app.scss';
 @import './header.scss';
-@import './controls.scss';
-@import './todo-list.scss';
+@import './controls/controls.scss';
+@import './todo-list/todo-list.scss';
 @import './add-panel.scss';
+@import './error-indicator.scss';

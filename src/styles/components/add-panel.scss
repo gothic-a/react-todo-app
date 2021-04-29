@@ -4,7 +4,7 @@
     width: 100%;
 
     .add-field {
-        box-shadow: 0px -3px 10px 3px rgba(79, 79, 79, 0.2);
+        box-shadow: 0px -3px 10px 0px rgba(79, 79, 79, 0.25);
         border-radius: 25px;
         display: flex;
         justify-content: space-between;
@@ -13,19 +13,8 @@
         width: 100%;
 
         input {
-            border: 0px solid $text-light;
             border-radius: 25px 0 0 25px;
-            padding: 15px 25px;
-            box-sizing: border-box;
-            font-family: QuickSand;
             width: 100%;
-            
-            color: lighten($color: $text-main, $amount: 0%);
-            font-weight: 500;
-
-            &:focus {
-                outline: none;
-            }
         }
 
         .btn {
@@ -33,6 +22,7 @@
             background-color: $button-main;
             padding: 0 30px 0 25px;
             color: white;
+            font-size: $font-size + 0.1em;
 
             &:hover, &:focus {
                 background-color: darken($color: $button-main, $amount: 10%);

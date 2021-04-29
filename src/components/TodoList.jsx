@@ -1,18 +1,33 @@
 import { useContext } from 'react'
+
 import TasksContext from '../context/tasks-context'
+import { onDone, onImportant, onDelete } from '../actions'
+
 import TodoListItem from './TodoListIem'
+import EmptyList from './EmptyList'
 
 const TodoList = () => {
 
-    const { state: {tasks, filter, searchReq} } = useContext(TasksContext)
+    const { state: {tasks, filter, searchReq}, dispatch } = useContext(TasksContext)
 
-    // филтрацию в отдельный компонент 
+
+    const onListClick = (e) => {
+        if(e.target.dataset.type) {
+            const dataType = e.target.dataset.type 
+
+            const id = e.target.closest('.todo-list-item').id
+
+            if(dataType === 'done') dispatch(onDone(id))
+            if(dataType === 'delete') dispatch(onDelete(id))
+            if(dataType === 'important') dispatch(onImportant(id))
+        }
+    }
 
     const filterTasks = (tasks) => {
         if(filter === 'all') return tasks
-        return tasks.filter(task => {
-            if(task[filter]) return task 
-        })
+        if(filter === 'important') return tasks.filter(t => t.important && !t.done)
+        return tasks.filter(task => task[filter])
+        
     }
 
     const searchTasks = (tasks) => {
@@ -25,10 +40,12 @@ const TodoList = () => {
 
     const filteredTasks = searchTasks( filterTasks(tasks) )
 
+    
+
     return (
-        <ul className="todo-list">
+        <ul className="todo-list" onClick={onListClick}>
             {
-                filteredTasks.map(task => <TodoListItem {...task} key={task.id}/>)
+                tasks.length ? filteredTasks.map(task => <TodoListItem {...task} key={task.id}/>) : <EmptyList/>
             }
         </ul>
     )
