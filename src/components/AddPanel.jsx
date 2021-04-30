@@ -9,8 +9,14 @@ const AddPanel = () => {
 
     const addClick = () => {
         if(value !== '') dispatch(onAdd(value))
-
         setValue('')
+
+        document.querySelector('.add-input').focus()
+        
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     }
 
     return (

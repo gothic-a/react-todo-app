@@ -1,3 +1,22 @@
+body {
+    &::-webkit-scrollbar {
+        width: 12px;
+
+        &-track {
+            background-color: $background;
+        }
+
+        &-thumb {
+            background-color: rgba(255, 255, 255, 0.75);
+            border-radius: 50px;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+}
+
 i, p, button, input, span {
     font-size: $font-size;
     font-style: normal !important;
@@ -11,8 +30,8 @@ i, p, button, input, span {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 75px ;
-    padding-bottom: 50px;
+    padding-top: 70px ;
+    padding-bottom: 70px;
     box-sizing: border-box;
 
     .wrapper {
