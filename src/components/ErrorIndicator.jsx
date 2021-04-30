@@ -1,6 +1,5 @@
 
 const ErrorIndicator = () => {
-
     return (
         <div className="error-indicator">
             

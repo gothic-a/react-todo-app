@@ -9,7 +9,7 @@
         font-weight: 500;
         font-family: $first-font;
         color: $text-main;
-        font-size: $font-size * 1.75;
+        font-size: $font-size * 1.5;
     }
 
     .arrow {
@@ -18,13 +18,13 @@
             color: $text-main;
             font-size: $font-size * 1.5; 
             animation: jump 5s linear infinite; 
-            opacity: .7;
+            opacity: .6;
         }
 
         @keyframes jump {
 
             10% {
-                opacity: .7;
+                opacity: .6;
                 transform: translateY(0px);
             }
 
@@ -36,17 +36,17 @@
 
             23% {
                 transform: translateY(0px);
-                opacity: .7;
+                opacity: .6;
             }
 
             29% {
-                transform: translateY(10px);
+                transform: translateY(8px);
                 opacity: .9;
             }
 
             35% {
                 transform: translateY(0px);
-                opacity: .7;
+                opacity: .6;
             }
 
         }

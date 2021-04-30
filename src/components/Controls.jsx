@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import TasksContext from '../context/tasks-context'
+import StoreContext from '../context/store-context'
 
 import { onSearch, onFilter } from '../actions'
 
@@ -7,7 +7,7 @@ import Search from './Search'
 import Filters from './Filters'
 
 const Controls = () => {
-    const { state: {filter}, dispatch } = useContext(TasksContext)
+    const { state: {filter}, dispatch } = useContext(StoreContext)
 
     const onSearchInput = (req) => {
         dispatch(onSearch(req))

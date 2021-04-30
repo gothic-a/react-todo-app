@@ -3,14 +3,11 @@ import { useState, useEffect} from 'react'
 const Header = ({tasks}) => {
 
     const [actual, setActual] = useState(null)
-    const [done, setDone] = useState(null)
 
     useEffect(() => {
-        
         setActual(
             tasks.filter(t => !t.done).length
         )
-
     }, [tasks])
 
     return (

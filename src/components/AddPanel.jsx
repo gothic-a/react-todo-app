@@ -1,11 +1,11 @@
-import TasksContext from '../context/tasks-context'
+import StoreContext from '../context/store-context'
 import { useState, useContext } from 'react'
 import { onAdd } from '../actions'
 
 const AddPanel = () => {
     const [value, setValue] = useState('')
 
-    const { dispatch } = useContext(TasksContext) 
+    const { dispatch } = useContext(StoreContext) 
 
     const addClick = () => {
         if(value !== '') dispatch(onAdd(value))

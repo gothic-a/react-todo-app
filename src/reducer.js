@@ -22,7 +22,6 @@ const addTask = (tasks, task) => {
 }
 
 const changeTask = (tasks, id, type) => {
-        console.log(id)
     
         const idx = tasks.findIndex(t => t.id === id)
         const task = tasks[idx]

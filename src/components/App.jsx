@@ -1,6 +1,6 @@
 import { useReducer, useEffect } from 'react'
 
-import TasksContext from '../context/tasks-context'
+import StoreContext from '../context/store-context'
 import { reducer, initialState } from '../reducer'
 import { getTasks, setTasks } from '../services/tasks'
 
@@ -27,7 +27,7 @@ const App = () => {
     }, [state.tasks])
 
     return (
-        <TasksContext.Provider value={ { state, dispatch } }>
+        <StoreContext.Provider value={ { state, dispatch } }>
             <div className="wrapper-outer">
                 <div className="wrapper">
                     <Header tasks={state.tasks}/>
@@ -36,7 +36,7 @@ const App = () => {
                     <AddPanel />
                 </div> 
             </div>
-        </TasksContext.Provider>
+        </StoreContext.Provider>
     )
 }
 
