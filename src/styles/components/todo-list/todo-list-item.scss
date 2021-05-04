@@ -8,6 +8,8 @@
     margin-bottom: 15px;
     color: $text-main;
     background-color: white;
+    overflow:hidden;
+    word-wrap: break-word;
 
     .text {
         display: flex;
@@ -15,7 +17,8 @@
         font-weight: 500;
         padding-left: 25px;
         cursor: pointer;
-        
+        overflow: hidden;
+
         i {
             margin-right: 25px;
             color: rgb(250, 250, 250);
@@ -27,15 +30,23 @@
     }
 
     .item-controls {
-        margin-right: 12px;
+        margin: 0 20px 0 25px;
         display: flex;
+
+        @media (max-width: 480px) {
+            margin: 0 15px;
+        }
 
         .btn {
             font-size: ($font-size + 0.025);
+            padding: 0 8px;
+            margin: 0 5px;
+
+            @media (max-width: 480px) {
+                padding: 0 5px;
+            }
 
             &-remove {
-               padding-left: 15px;
-               margin-right: 12px;
 
                &:hover, &:focus {
                     background-color: white !important;
@@ -44,7 +55,6 @@
             }
 
             &-important {
-                padding-right: 15px;
                 color: $button-main;
 
                 &:hover {
@@ -55,6 +65,13 @@
                 &:active, &:focus {
                     color: $button-main;
                     background-color: white !important;
+                }
+
+                @media (max-width: 480px) {
+                    &:hover {
+                        background-color: white !important;
+                        color: $button-main !important;
+                    }
                 }
             }
         }
@@ -105,6 +122,13 @@
             &:active, &:focus {
                 color: $important-color;
                 background-color: white !important;
+            }
+
+            @media (max-width: 480px) {
+                &:hover {
+                    background-color: white !important;
+                    color: $important-color !important; 
+                }
             }
 
             

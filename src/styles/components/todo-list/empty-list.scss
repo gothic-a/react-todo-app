@@ -1,6 +1,10 @@
 .empty-list {
     text-align: center;
     padding: 10px;
+
+    @media (max-width: 480px) {
+        padding: 0;
+    }
     
     h3 {
         margin: 0;

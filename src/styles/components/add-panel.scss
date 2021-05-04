@@ -24,6 +24,10 @@
             color: white;
             font-size: $font-size + 0.1em;
 
+            @media (max-width: 480px) {
+                padding: 0 22px 0 20px;
+            }
+
             &:hover, &:focus {
                 background-color: darken($color: $button-main, $amount: 10%);
             }

@@ -30,9 +30,13 @@ i, p, button, input, span {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 70px ;
+    padding-top: 70px;
     padding-bottom: 70px;
     box-sizing: border-box;
+    
+    @media (max-width: 480px) {
+        padding: 30px 0 40px 0;
+    }
 
     .wrapper {
         width: 550px;
@@ -41,6 +45,11 @@ i, p, button, input, span {
         padding: 0 35px;
         border-radius: 10px;
         background-color: $background-lite;
+
+        @media (max-width: 480px) {
+            padding: 0 20px;
+            width: 100vw;
+        }
     }
 }
 

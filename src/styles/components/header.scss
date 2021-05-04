@@ -4,12 +4,21 @@
     justify-content: space-between;
     margin: 15px 0 10px 0;
 
+    @media (max-width: 480px) {
+        margin: 35px 10px 27px 0;
+        justify-content: flex-end;
+    }
+
     &-title {
         font-weight: 400;
         color: $text-main;
         font-family: $first-font;
         text-transform: uppercase;
         font-size: $font-size * 2.15;
+
+        @media (max-width: 480px) {
+            display: none;
+        }
     }
 
     &-status {
